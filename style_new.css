@@ -1,0 +1,980 @@
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #0f0f0f;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヒーローセクション */
+.hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    padding: 80px 0;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #ff6b35;
+    background: linear-gradient(45deg, #ff6b35, #ff8c42);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+/* 価格バッジ */
+.price-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.price-old {
+    background: #333;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: line-through;
+    color: #999;
+}
+
+.price-old span {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.price-arrow {
+    font-size: 24px;
+    color: #ff6b35;
+    font-weight: bold;
+}
+
+.price-new {
+    background: linear-gradient(45deg, #ff6b35, #ff8c42);
+    padding: 12px 25px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 700;
+}
+
+.price-new span {
+    font-size: 20px;
+}
+
+/* 比較グラフ */
+.comparison-chart {
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chart-item {
+    margin-bottom: 20px;
+}
+
+.chart-label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #cccccc;
+}
+
+.chart-bar {
+    position: relative;
+    height: 40px;
+    background: #333;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.bar-old, .bar-new {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.bar-old {
+    background: #666;
+    color: #fff;
+    top: 0;
+}
+
+.bar-new {
+    background: linear-gradient(45deg, #ff6b35, #ff8c42);
+    color: #fff;
+    top: 0;
+    z-index: 2;
+}
+
+.chart-ratio {
+    text-align: center;
+    color: #ff6b35;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* CTAボタン */
+.cta-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 18px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 200px;
+}
+
+.cta-button.primary {
+    background: linear-gradient(45deg, #ff6b35, #ff8c42);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.cta-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: #ff6b35;
+    border: 2px solid #ff6b35;
+}
+
+.cta-button.secondary:hover {
+    background: #ff6b35;
+    color: white;
+}
+
+.cta-button.large {
+    padding: 25px 50px;
+    font-size: 22px;
+}
+
+/* 対象業種 */
+.target-industries {
+    color: #cccccc;
+    font-size: 16px;
+}
+
+.industry {
+    background: #333;
+    padding: 5px 12px;
+    border-radius: 15px;
+    margin: 0 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* 証拠ストリップ */
+.proof-strip {
+    background: #1a1a1a;
+    padding: 40px 0;
+}
+
+.proof-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.proof-item {
+    padding: 20px;
+}
+
+.proof-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ff6b35;
+    margin-bottom: 10px;
+}
+
+.proof-label {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+.proof-note {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 代表動画 */
+.main-video {
+    padding: 80px 0;
+    background-color: #0f0f0f;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-caption {
+    text-align: center;
+    color: #cccccc;
+    font-size: 16px;
+}
+
+/* セクションタイトル */
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #ffffff;
+}
+
+/* 見本ギャラリー */
+.gallery {
+    padding: 80px 0;
+    background-color: #1a1a1a;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.video-card {
+    position: relative;
+    background: #2a2a2a;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.video-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff6b35;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 3;
+}
+
+.video-wrapper-small {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 177.78%; /* 9:16 aspect ratio */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.video-wrapper-small iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-description {
+    font-size: 14px;
+    color: #cccccc;
+    text-align: center;
+}
+
+.gallery-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-link {
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 1px solid #ff6b35;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.gallery-link:hover {
+    background: #ff6b35;
+    color: white;
+}
+
+/* Before→After */
+.before-after {
+    padding: 80px 0;
+    background-color: #0f0f0f;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.comparison-side {
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.before {
+    background: linear-gradient(135deg, #333, #2a2a2a);
+}
+
+.after {
+    background: linear-gradient(135deg, #ff6b35, #ff8c42);
+}
+
+.comparison-side h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.comparison-side ul {
+    list-style: none;
+}
+
+.comparison-side li {
+    padding: 10px 0;
+    font-size: 16px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.before li:before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: #ff4444;
+    font-weight: bold;
+}
+
+.after li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* 価格セクション */
+.pricing {
+    padding: 80px 0;
+    background-color: #1a1a1a;
+}
+
+.pricing-anchor {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 24px;
+}
+
+.anchor-old {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.anchor-arrow {
+    color: #ff6b35;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.anchor-new {
+    color: #ff6b35;
+    font-weight: 700;
+}
+
+.pricing-section {
+    margin-bottom: 50px;
+}
+
+.pricing-section h3 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff6b35;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.pricing-card {
+    background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.pricing-card:hover {
+    border-color: #ff6b35;
+    transform: translateY(-5px);
+}
+
+.pricing-card.recommended {
+    border-color: #ff6b35;
+    background: linear-gradient(135deg, #ff6b35, #ff8c42);
+}
+
+.recommended-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #ff6b35;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pricing-card h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff6b35;
+}
+
+.pricing-card.recommended h4 {
+    color: #fff;
+}
+
+.price {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.price span {
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.price-per {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+.price-desc {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+.options-section, .rules-section {
+    margin-bottom: 40px;
+}
+
+.options-section h3, .rules-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff6b35;
+    text-align: center;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.option-item {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option-name {
+    font-weight: 600;
+}
+
+.option-price {
+    color: #ff6b35;
+    font-weight: 700;
+}
+
+.option-desc {
+    font-size: 14px;
+    color: #999;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.rule-item {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.pricing-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* 制作フロー */
+.flow {
+    padding: 80px 0;
+    background-color: #0f0f0f;
+}
+
+.flow-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.step {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+    border-radius: 12px;
+    position: relative;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #ff6b35, #ff8c42);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+    color: white;
+}
+
+.step h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ff6b35;
+}
+
+.flow-memo {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    border-left: 4px solid #ff6b35;
+}
+
+.flow-cta {
+    text-align: center;
+}
+
+/* 社会的証明 */
+.social-proof {
+    padding: 80px 0;
+    background-color: #1a1a1a;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial {
+    background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid #ff6b35;
+}
+
+.testimonial p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    color: #ff6b35;
+    font-weight: 600;
+}
+
+/* 比較表 */
+.comparison-table {
+    padding: 80px 0;
+    background-color: #0f0f0f;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.comparison {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.comparison th,
+.comparison td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.comparison th {
+    background: #2a2a2a;
+    font-weight: 700;
+    color: #ff6b35;
+}
+
+.comparison .highlight-col {
+    background: linear-gradient(135deg, #ff6b35, #ff8c42);
+    color: white;
+}
+
+.comparison td strong {
+    color: #ff6b35;
+}
+
+/* リスク低減 */
+.risk-reduction {
+    padding: 80px 0;
+    background-color: #1a1a1a;
+}
+
+.risk-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.risk-item {
+    background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #ff6b35;
+}
+
+.risk-item h3 {
+    color: #ff6b35;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* FAQ */
+.faq {
+    padding: 80px 0;
+    background-color: #0f0f0f;
+}
+
+.faq-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #ff6b35;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ff6b35;
+}
+
+.faq-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 最終CTA */
+.final-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+    text-align: center;
+}
+
+.final-message {
+    font-size: 42px;
+    margin-bottom: 40px;
+    color: #ff6b35;
+    font-weight: 700;
+}
+
+.contact-info {
+    margin-top: 30px;
+    color: #cccccc;
+    font-size: 16px;
+}
+
+/* フッター */
+.footer {
+    padding: 40px 0;
+    background-color: #0a0a0a;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    color: #ff8c42;
+}
+
+/* 固定CTA */
+.floating-cta {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.floating-cta a {
+    display: block;
+    background: linear-gradient(45deg, #ff6b35, #ff8c42);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+    transition: all 0.3s ease;
+}
+
+.floating-cta a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6);
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .flow-steps {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .proof-items {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        padding: 60px 0;
+        min-height: 80vh;
+    }
+    
+    .main-video,
+    .gallery,
+    .pricing,
+    .flow,
+    .faq,
+    .before-after,
+    .social-proof,
+    .comparison-table,
+    .risk-reduction {
+        padding: 60px 0;
+    }
+    
+    .price-badge {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .cta-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .final-message {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+    }
+    
+    .cta-button {
+        padding: 15px 25px;
+        font-size: 16px;
+        min-width: 180px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .pricing-card,
+    .step,
+    .faq-item,
+    .testimonial,
+    .risk-item {
+        padding: 25px 20px;
+    }
+    
+    .comparison-chart {
+        margin-bottom: 30px;
+    }
+    
+    .chart-bar {
+        height: 35px;
+    }
+    
+    .bar-old, .bar-new {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+}
+
